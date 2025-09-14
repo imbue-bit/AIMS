@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机科学研究风格探索问卷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        /* 结果显示动画 */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto max-w-4xl px-4 py-8 md:py-16">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">计算机科学研究风格探索问卷</h1>
+            <p class="text-lg text-slate-600">AIMS | <a href="https://github.com/imbue-bit/AIMS/new/main">GitHub</a></p>
+        </header>
+
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-md mb-12 border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">问卷说明</h2>
+            <div class="space-y-3 text-slate-700">
+                <p>欢迎参加！本问卷旨在帮助您发现个人在科研工作中最自然的偏好与倾向。</p>
+                <p>请根据您的第一感觉，选择那个<strong class="font-semibold text-sky-600">更符合</strong>您真实想法的描述。完成所有题目后，点击底部的按钮即可查看您的科研画像。</p>
+            </div>
+        </section>
+
+        <main id="questionnaire">
+            <form id="survey-form">
+                <div class="space-y-10">
+                    
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">1.</span>当一个新项目启动时，更能激发你热情的是：</p>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q1" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(A) 构想一个可能彻底改变游戏规则的、前所未有的方案。</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q1" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(B) 找到一个现有方案，并有把握将其性能和稳定性提升到极致。</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">2.</span>你认为一个“优雅”的解决方案，更多是指：</p>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q2" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(A) 它在数学上是自洽且逻辑严谨的。</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q2" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(B) 它能够被清晰地实现，并在各种测试中表现稳定。</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">3.</span>你更愿意将时间投入在：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q3" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 开发一个能立即被部署并解决用户燃眉之急的工具。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q3" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 探索一个可能要多年后才能应用，但具有普遍指导意义的原理。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">4.</span>让你感到更沮丧的是：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q4" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 一个充满前景的实验，最终产出了一堆无法解释的混乱数据。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q4" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 一个逻辑上看似完美的理论，被发现其中有一个微小但致命的 flaw。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">5.</span>如果让你向非专业人士介绍你的工作，你会更强调：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q5" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 它将如何影响人们的日常生活或解决某个社会问题。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q5" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 它在技术上如何精巧地解决了某个复杂的计算难题。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">6.</span>你更钦佩哪种类型的科学家？</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q6" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 他们提出的理论深刻而基础，为后人开辟了全新的研究领域。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q6" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 他们善于整合现有知识，打造出真正改变世界的实用系统或产品。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">7.</span>你认为我们领域更大的挑战在于：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q7" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 如何让普通大众更好地理解、信任和使用复杂的技术。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q7" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 如何突破当前硬件和算法的根本性瓶颈。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">8.</span>面对一个现有工具的严重缺陷，你的第一反应是：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q8" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) “也许我们从根本上就需要一种全新的方法来解决这个问题。”</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q8" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) “我能找到这个缺陷的根源，并把它修复得更好。”</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">9.</span>你认为更有价值的论文是：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q9" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 那篇通过严谨的数学推导，证明了一个重要结论的论文。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q9" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 那篇通过大量详实的实验，展示了一个方法有效性的论文。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">10.</span>当你完成一个项目时，最大的满足感来源于：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q10" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 它被业界同行采纳，应用在了真实的产品中。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q10" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 它引发了学术圈的广泛讨论，激发了许多后续研究。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">11.</span>设想一下，你正在阅读一篇开创性的论文，最让你兴奋的部分是：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q11" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 作者对人类行为或社会需求的深刻洞察。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q11" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 作者展示的惊人计算性能或巧妙的系统架构。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">12.</span>你更喜欢解决哪类问题？</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q12" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 一个定义明确、可以通过不断打磨和优化来获得极致效果的问题。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q12" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 一个充满未知、需要大胆假设和探索全新路径的问题。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">13.</span>在评估一个新想法时，你首先会：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q13" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 设计一个初步实验，快速验证它在实际场景中是否可行。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q13" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 在纸上进行逻辑推演，检查它在理论上是否站得住脚。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">14.</span>你认为更有害的研究是：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q14" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 一个功能强大但没人用的复杂系统。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q14" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 一个逻辑优美但找不到任何应用的抽象理论。</span></label></div></div>
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100"><p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">15.</span>如果让你领导一个团队，你会更注重：</p><div class="space-y-4"><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q15" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(A) 确保团队的最终产出对目标用户是直观、公平且有益的。</span></label><label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors"><input type="radio" name="q15" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300"><span class="ml-4 text-slate-700">(B) 确保团队的技术方案在理论和性能上都达到业界顶尖水平。</span></label></div></div>
+
+                    <!-- 问题 16 -->
+                    <div class="question-card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <p class="text-lg font-semibold mb-5"><span class="text-sky-500 font-bold mr-2">16.</span>你更倾向于在职业生涯中：</p>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q16" value="A" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(A) 承担高风险，追求可能重塑整个领域的颠覆性创新。</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-sky-50 cursor-pointer transition-colors">
+                                <input type="radio" name="q16" value="B" class="h-5 w-5 text-sky-600 focus:ring-sky-500 border-gray-300">
+                                <span class="ml-4 text-slate-700">(B) 持续产出高质量、高影响力的工作，成为领域内稳定可靠的专家。</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </main>
+        
+        <!-- 触发按钮和提示 -->
+        <div class="mt-12 text-center">
+            <button id="calculate-btn" class="bg-sky-600 text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-sky-700 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-300">
+                计算我的画像
+            </button>
+            <p id="alert-message" class="text-red-500 mt-4 h-6"></p>
+        </div>
+
+        <!-- 结果显示区 -->
+        <section id="result-section" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-slate-200 hidden">
+            <h2 class="text-3xl font-bold mb-6 text-center text-slate-900">你的科研画像是</h2>
+            <div class="text-center bg-slate-100 p-8 rounded-lg">
+                <p id="result-profile" class="text-6xl md:text-7xl font-bold text-sky-600 tracking-widest font-mono"></p>
+                <p id="result-description" class="mt-4 text-lg text-slate-600"></p>
+            </div>
+            <div class="mt-6 text-center">
+                <p class="text-slate-500">这个画像揭示了您在科研世界中独特的“品味”和倾向。</p>
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calculateBtn = document.getElementById('calculate-btn');
+            const alertMessage = document.getElementById('alert-message');
+            const resultSection = document.getElementById('result-section');
+            const resultProfile = document.getElementById('result-profile');
+            const resultDescription = document.getElementById('result-description');
+            
+            // 定义计分规则
+            const scoringMap = {
+                // 维度一: Area (H/C)
+                '5': { A: 'H', B: 'C' },
+                '7': { A: 'H', B: 'C' },
+                '11': { A: 'H', B: 'C' },
+                '15': { A: 'H', B: 'C' },
+                // 维度二: Intent (A/F)
+                '3': { A: 'A', B: 'F' },
+                '6': { B: 'A', A: 'F' }, // 注意这题选项反了 A是F B是A
+                '10': { A: 'A', B: 'F' },
+                '14': { A: 'A', B: 'F' },
+                 // 维度三: Method (T/E)
+                '2': { A: 'T', B: 'E' },
+                '4': { B: 'T', A: 'E' }, // 注意这题选项反了
+                '9': { A: 'T', B: 'E' },
+                '13': { B: 'T', A: 'E' }, // 注意这题选项反了
+                // 维度四: Scale (D/R)
+                '1': { A: 'D', B: 'R' },
+                '8': { A: 'D', B: 'R' },
+                '12': { B: 'D', A: 'R' }, // 注意这题选项反了
+                '16': { A: 'D', B: 'R' },
+            };
+
+            const descriptions = {
+                'H': '以人为中心 (Human-centric)', 'C': '以计算为中心 (Compute-centric)',
+                'A': '应用性 (Applied)', 'F': '基础性 (Foundational)',
+                'E': '实证性 (Empirical)', 'T': '理论性 (Theoretical)',
+                'R': '精进型 (Refining)', 'D': '颠覆型 (Disruptive)'
+            };
+
+            calculateBtn.addEventListener('click', () => {
+                const form = document.getElementById('survey-form');
+                const formData = new FormData(form);
+                const answers = Object.fromEntries(formData.entries());
+
+                // 检查是否所有问题都已回答
+                if (Object.keys(answers).length < 16) {
+                    alertMessage.textContent = '请完成所有16个问题后再计算哦！';
+                    // 找到第一个未回答的问题并高亮提示
+                    for (let i = 1; i <= 16; i++) {
+                        if (!answers[`q${i}`]) {
+                           const unansweredQuestion = document.querySelector(`input[name="q${i}"]`).closest('.question-card');
+                           unansweredQuestion.style.border = '2px solid #ef4444'; // red-500
+                           unansweredQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                           break;
+                        }
+                    }
+                    return;
+                }
+
+                // 清除提示和边框
+                alertMessage.textContent = '';
+                document.querySelectorAll('.question-card').forEach(card => card.style.border = '1px solid #f1f5f9'); // slate-100
+
+                // 计算得分
+                const scores = { H: 0, C: 0, A: 0, F: 0, T: 0, E: 0, D: 0, R: 0 };
+                for (let i = 1; i <= 16; i++) {
+                    const questionNum = i.toString();
+                    const selectedOption = answers[`q${questionNum}`];
+                    if (scoringMap[questionNum] && scoringMap[questionNum][selectedOption]) {
+                        const scoreType = scoringMap[questionNum][selectedOption];
+                        scores[scoreType]++;
+                    }
+                }
+                
+                // 确定最终画像
+                const profile = [
+                    scores.H >= scores.C ? 'H' : 'C',
+                    scores.A >= scores.F ? 'A' : 'F',
+                    scores.T >= scores.E ? 'T' : 'E',
+                    scores.D >= scores.R ? 'D' : 'R'
+                ];
+                
+                const profileString = profile.join('');
+                const descriptionString = profile.map(p => descriptions[p]).join(' / ');
+
+                // 显示结果
+                resultProfile.textContent = profileString;
+                resultDescription.textContent = descriptionString;
+                resultSection.classList.remove('hidden');
+                resultSection.classList.add('fade-in');
+
+                // 平滑滚动到结果区域
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+             // 用户选择后移除红色警告边框
+            const form = document.getElementById('survey-form');
+            form.addEventListener('change', (event) => {
+                if (event.target.type === 'radio') {
+                    const parentCard = event.target.closest('.question-card');
+                    if (parentCard.style.border.includes('rgb(239, 68, 68)')) { // red-500 in rgb
+                        parentCard.style.border = '1px solid #f1f5f9';
+                        alertMessage.textContent = '';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
