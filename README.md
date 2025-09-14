@@ -4,11 +4,11 @@
 [![GitHub forks](https://img.shields.io/github/forks/imbue-bit/AIMS)](https://github.com/your-username/AIMS-Benchmark/network)
 [![GitHub stars](https://img.shields.io/github/stars/imbue-bit/AIMS)](https://github.com/your-username/AIMS-Benchmark/stargazers)
 
-**AIMS Benchmark** 是一个旨在评估和提升研究人员在计算机科学领域**“品味”**（Taste）的开源项目。
+**AIMS Benchmark** 是一个旨在评估和提升研究人员在计算机科学领域“品味”（Taste）的开源项目。
 
 本项目通过一系列精心设计的问卷和评估任务，量化研究人员的代码品味。
 
-> **问卷初稿由 [@黄鹤](#)贡献，奠定了本项目的基础。**
+> **问卷初稿由 [@黄鹤](#) 贡献，奠定了本项目的基础。**
 
 ## 🤔 什么是“品味”？
 
